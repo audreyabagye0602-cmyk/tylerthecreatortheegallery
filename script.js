@@ -23,10 +23,10 @@ const observer = new IntersectionObserver((entries, obs) => {
 
 faders.forEach(el => observer.observe(el));
 
-// CURSOR
-const cursor = document.querySelector(".cursor-star");
+// Custom Cursor
+const cursor = document.querySelector('.cursor');
 
-document.addEventListener("mousemove", e => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.pageX + 'px';
+  cursor.style.top = e.pageY + 'px';
 });
